@@ -4,24 +4,24 @@ from sklearn.model_selection import train_test_split
 from keras.models import Sequential
 from keras.layers import Dense,Dropout
 from keras.optimizers import SGD
-#from keras.callbacks import EarlyStopping,TensorBoard
 from keras.callbacks import Callback
 import keras.backend as K
 from numpy import genfromtxt
 import numpy,os
 from sklearn import preprocessing
 from keras.callbacks import EarlyStopping,TensorBoard
+
+X= genfromtxt('Db5_features.csv', delimiter=',', skip_header=0, usecols=(range(0,20)))
+"""
 #X1= genfromtxt('Db2_features.csv', delimiter=',', skip_header=0, usecols=(([2,3,7,8,12,13,17,18])))
 #X2= genfromtxt('Db4_features.csv', delimiter=',', skip_header=0, usecols=(([4,9,14,19])))
-X3= genfromtxt('Db5_features.csv', delimiter=',', skip_header=0, usecols=(range(0,20)))
 #X4= genfromtxt('Db8_features.csv', delimiter=',', skip_header=0, usecols=(([0,1,5,6,10,11,15,16])))
 
 #X=[[]*n for n in range(500)]
-X=X3
 #for i in range(0,500):
 #    X[i]=list(numpy.concatenate((list(X1[i]),list(X2[i]),list(X3[i]),list(X4[i])), axis=None))
-
 X=numpy.array(X)
+"""
 X=X[100:300,:]
 
 y1=[0]*100

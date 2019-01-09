@@ -157,12 +157,14 @@ def sampl(d1,d2,d3,d4,d5):
         std_X = np.std(X)
         ee=entropy.sample_entropy(X,2,0.2*std_X)
         sa4.append(ee[0])
+
     for i in range(0,500):
         X=d5[i]
         print(i)
         std_X = np.std(X)
         ee=entropy.sample_entropy(X,2,0.2*std_X)
         sa5.append(ee[0])
+
     return(sa1,sa2,sa3,sa4,sa5)
 
 def shan(d1,d2,d3,d4,d5):
@@ -195,19 +197,11 @@ def shan(d1,d2,d3,d4,d5):
         sh5.append(entropy.shannon_entropy(X))
     return(sh1,sh2,sh3,sh4,sh5)
 
-d1= genfromtxt('Data/db5D1.csv', delimiter=',', skip_header=0)
-d2= genfromtxt('Data/db5D2.csv', delimiter=',', skip_header=0)
-d3= genfromtxt('Data/db5D3.csv', delimiter=',', skip_header=0)
-d4= genfromtxt('Data/db5D4.csv', delimiter=',', skip_header=0)
-d5= genfromtxt('Data/db5A4.csv', delimiter=',', skip_header=0)
-
-"""
-d1=d1.T
-d2=d2.T
-d3=d3.T
-d4=d4.T
-d5=d5.T
-"""
+d1= genfromtxt('Data/db30D1.csv', delimiter=',', skip_header=0)
+d2= genfromtxt('Data/db30D2.csv', delimiter=',', skip_header=0)
+d3= genfromtxt('Data/db30D3.csv', delimiter=',', skip_header=0)
+d4= genfromtxt('Data/db30D4.csv', delimiter=',', skip_header=0)
+d5= genfromtxt('Data/db30A4.csv', delimiter=',', skip_header=0)
 
 sa1,sa2,sa3,sa4,sa5=sampl(d1,d2,d3,d4,d5)
 r1,r2,r3,r4,r5=renyi_entropy(d1,d2,d3,d4,d5)
@@ -215,8 +209,10 @@ p1,p2,p3,p4,p5=permu(d1,d2,d3,d4,d5)
 sh1,sh2,sh3,sh4,sh5=shan(d1,d2,d3,d4,d5)
 
 X=[r1,r2,r3,r4,r5,p1,p2,p3,p4,p5,sh1,sh2,sh3,sh4,sh5,sa1,sa2,sa3,sa4,sa5]
+
 """
 def energy(d1,d2,d3,d4,d5):
+
     en1=[];en2=[];en3=[];en4=[];en5=[]
     for i in range(0,500):
         X=d1[i]
@@ -251,6 +247,12 @@ def energy(d1,d2,d3,d4,d5):
 
     return(en1,en2,en3,en4,en5)
 
+d1= genfromtxt('Data/db14D1.csv', delimiter=',', skip_header=0)
+d2= genfromtxt('Data/db14D2.csv', delimiter=',', skip_header=0)
+d3= genfromtxt('Data/db14D3.csv', delimiter=',', skip_header=0)
+d4= genfromtxt('Data/db14D4.csv', delimiter=',', skip_header=0)
+d5= genfromtxt('Data/db14A4.csv', delimiter=',', skip_header=0)
+
 e1,e2,e3,e4,e5=energy(d1,d2,d3,d4,d5)
 X=[e1,e2,e3,e4,e5]
 """
@@ -259,4 +261,4 @@ X=X.T
 
 a = np.asarray(X)
 
-np.savetxt("Db5_energy.csv", a, delimiter=",")
+np.savetxt("Db30_features.csv", a, delimiter=",")
