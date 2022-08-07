@@ -22,12 +22,12 @@ Finding the best Daubechies Family wavelet which can better approximate the non-
 
 6)Verify the criterion reflected in best performing model using various classifiers.
 
-##### Publication details
+#### Publication details
 This work can be found in the [Springer_link](https://link.springer.com/chapter/10.1007/978-981-15-0029-9_48)
 Part of the Advances in Intelligent Systems and Computing book series (AISC, volume 1045)
 https://doi.org/10.1007/978-981-15-0029-9_48
 
-###### Cite this paper as:
+##### Cite this paper as:
 Anila Glory H., Vigneswaran C., Shankar Sriram V.S. (2020) Identification of Suitable Basis Wavelet Function for Epileptic Seizure Detection Using EEG Signals. In: Luhach A., Kosa J., Poonia R., Gao XZ., Singh D. (eds) First International Conference on Sustainable Technologies for Computational Intelligence. Advances in Intelligent Systems and Computing, vol 1045. Springer, Singapore
 
 
